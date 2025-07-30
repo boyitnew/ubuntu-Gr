@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # به‌روزرسانی سیستم
-sudo apt update && sudo apt upgrade -y
+sudo apt update && \
+sudo DEBIAN_FRONTEND=noninteractive apt -y \
+  -o Dpkg::Options::="--force-confdef" \
+  -o Dpkg::Options::="--force-confold" upgrade
+
 
 # نصب محیط دسکتاپ MATE و اجزای لازم بدون lightdm
 sudo apt install -y ubuntu-mate-core mate-desktop-environment xorg dbus-x11 policykit-1 xserver-xorg-video-dummy
