@@ -2,3 +2,9 @@ bash <(wget -qO- https://raw.githubusercontent.com/boyitnew/ubuntu-Gr/main/setup
 
 
 bash <(curl -s https://raw.githubusercontent.com/boyitnew/ubuntu-Gr/main/setup.sh)
+
+
+
+
+google-chrome --no-sandbox &
+
